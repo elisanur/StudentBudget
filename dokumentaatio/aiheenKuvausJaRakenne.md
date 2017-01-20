@@ -2,17 +2,18 @@
 
 ### Aihe: Budjettilaskuri
 
-Toteutetaan ohjelma, jonka avulla opiskelija voi laskea kuukausi ja viikko budjetin haluamilleen menoilleen. Ohjelmassa tulee näkymään tulot ja menot erikseen. Käyttäjä voi mahdollisesti itse nimetä ja lisätä tuloihin ja menoihin otsakkeita. 
+Toteutetaan ohjelma, jonka avulla käyttäjä voi laskea kuukausi-, viikko- ja päiväbudjetin haluamilleen menoilleen. Ohjelmassa tulee näkymään tulot ja menot erikseen. Käyttäjä voi itse nimetä ja lisätä otsakkeita tuloihin ja menoihin. Ohjelma on suunnattu opiskelijoille, koska siitä tulee helppokäyttöinen ja sen avulla opiskelija voi huomioida tulot ja menot monipuolisesti. Opiskelija voi esimerkiksi määritellä tuloihin ottamansa lainat.
 
 ### Käyttäjät: 
 
-- Opiskelija tai muu 
+- Opiskelija tai muu käyttäjä
 
 ### Kaikkien käyttäjien toiminnot:
 
-- Otsakkeen kirjaaminen menojen alle
-- Otsakkeen kirjaaminen tulojen alle
-- Tulon/menon määrän kirjaaminen
+- Otsakkeen kirjaaminen menojen alle.
+- Otsakkeen kirjaaminen tulojen alle.
+- Tulon/menon määrän kirjaaminen ja muokkaaminen.
+- Otsakkeen poistaminen
 
 ### Ohjelman tarjoamat tulosteet:
 
@@ -26,3 +27,4 @@ Toteutetaan ohjelma, jonka avulla opiskelija voi laskea kuukausi ja viikko budje
 
 - Budjettilaskelman kääntäminen ja vieminen esimerkiksi pdf tai muuhun tiedostoon 
 - Budjettilaskelmissa näkyy yksityiskohtaisesti kuukausi-, viikko- ja päivätasolla mikä summa tiettyihin kohteisiin on käytettävissä.
+- Budettilaskelmaan voisi kirjata otetut lainat tai säästöt erilliseen osioon.
