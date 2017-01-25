@@ -1,30 +1,30 @@
-# Aiheen kuvaus ja rakenne
+# Topic spesification and description
 
-### Aihe: Budjettilaskuri
+### Topic: Budget calculator
 
-Toteutetaan ohjelma, jonka avulla käyttäjä voi laskea kuukausi-, viikko- ja päiväbudjetin haluamilleen menoilleen. Ohjelmassa tulee näkymään tulot ja menot erikseen. Käyttäjä voi itse nimetä ja lisätä otsakkeita tuloihin ja menoihin. Ohjelma on suunnattu opiskelijoille, koska siitä tulee helppokäyttöinen ja sen avulla opiskelija voi huomioida tulot ja menot monipuolisesti. Opiskelija voi esimerkiksi määritellä tuloihin ottamansa lainat.
+I will implement a program that allows the user calculate the monthly, weekly and daily budget. The program will present the income and expenses separately. User can name and add headers to both income and expenses which makes the program user friendly. The program is designed for students, because it will be easy to use and it helps to understand the current balance.
 
-### Käyttäjät: 
+### Users:
 
-- Opiskelija tai muu käyttäjä
+- Student or other user
 
-### Kaikkien käyttäjien toiminnot:
+### Functions for users:
 
-- Otsakkeen kirjaaminen menojen alle.
-- Otsakkeen kirjaaminen tulojen alle.
-- Tulon/menon määrän kirjaaminen ja muokkaaminen.
-- Otsakkeen poistaminen
+- Composing an expense title
+- Composing an income title
+- Assignin the amount for income/expence and modifying it later
+- Removing a title
 
-### Ohjelman tarjoamat tulosteet:
+### Program's print options
 
-- Kuukausibudjettilaskelma
-- Viikkobudjettilaskelma
-- Päiväbudjettilaskelma
+- Monthly budget
+- Weekly budget
+- Daily Budget
 
-- Laskelmissa tulee ilmi paljonko rahaa on käytettävissä kokonaisuudessaan, ja paljonko rahaa jää mahdollisesti säästöön tai onko budjetti miinuksella
+- Budget calculations show that how much money is there in total and how much there is to save/spend or if the balance is negative.
 
-### Laajentamismahdollisuuksia:
+### Possibilities for extensions
 
-- Budjettilaskelman kääntäminen ja vieminen esimerkiksi pdf tai muuhun tiedostoon 
-- Budjettilaskelmissa näkyy yksityiskohtaisesti kuukausi-, viikko- ja päivätasolla mikä summa tiettyihin kohteisiin on käytettävissä.
-- Budettilaskelmaan voisi kirjata otetut lainat tai säästöt erilliseen osioon.
+- Importing the budget calculations to a file, eg. pdf
+- Showing detailed calculations for weekly and daily budgets
+- Designing separated section for loans and savings
