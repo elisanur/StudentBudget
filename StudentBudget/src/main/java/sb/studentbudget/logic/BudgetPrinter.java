@@ -34,9 +34,9 @@ public class BudgetPrinter {
         review += "Total monthly expenses: " + this.calc.countExpenses() + " €\n";
 
         if (this.calc.countBalance() > 0) {
-            review += "Excess cash: " + this.calc.countBalance() + " €\n";
-            review += "Weekly budget: " + this.calc.countWeeklyBudget() + " €\n";
-            review += "Daily budget: " + this.calc.countDailyBudget() + " €\n";
+            review += "Excess cash: " + String.format("%.2f", this.calc.countBalance()) + " €\n";
+            review += "Weekly budget: " + String.format("%.2f", this.calc.countWeeklyBudget()) + " €\n";
+            review += "Daily budget: " + String.format("%.2f", this.calc.countDailyBudget()) + " €\n";
         } else {
             review += "Budget deficit: " + this.calc.countBalance() + " €";
         }

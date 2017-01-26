@@ -20,10 +20,10 @@ public class Main {
         budget.addExpense("vuokra", 300);
         budget.addExpense("puhelin", 30);
         budget.addExpense("sähkö", 5);
-        budget.addExpense("bussilippu", 25);
+        budget.addExpense("bussilippu", 27.4);
         budget.addExpense("ruoka", 150);
         
-        budget.addIncome("opintotuki", 400);
+        budget.addIncome("opintotuki", 436);
         budget.addIncome("säästöt", 200);
         
         System.out.println(printer.printDetailedMonthlyBudget());

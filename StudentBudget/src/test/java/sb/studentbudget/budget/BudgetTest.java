@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sb.studentbudget.budget;
 
 import org.junit.After;
@@ -12,10 +7,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author elisanur
- */
 public class BudgetTest {
 
     public BudgetTest() {
@@ -38,7 +29,7 @@ public class BudgetTest {
     }
 
     @Test
-    public void incomeNameSetCorrectly() {
+    public void expenseNameSetCorrectly() {
         Budget budget = new Budget();
 
         budget.addExpense("rent", 300);
@@ -48,4 +39,36 @@ public class BudgetTest {
         assertEquals("rent", answer);
     }
 
+    @Test
+    public void expenseAmountSetCorrectly() {
+        Budget budget = new Budget();
+
+        budget.addExpense("rent", 300);
+
+        double answer = budget.getExpense().get(0).getAmount();
+
+        assertEquals(300, answer, 0.0005);
+    }
+
+    @Test
+    public void incomeNameSetCorrectly() {
+        Budget budget = new Budget();
+
+        budget.addIncome("student support", 400);
+
+        String answer = budget.getIncome().get(0).getName();
+
+        assertEquals("student support", answer);
+    }
+
+    @Test
+    public void incomeAmountSetCorrectly() {
+        Budget budget = new Budget();
+
+        budget.addIncome("student loan", 300);
+
+        double answer = budget.getIncome().get(0).getAmount();
+
+        assertEquals(300, answer, 0.0005);
+    }
 }
