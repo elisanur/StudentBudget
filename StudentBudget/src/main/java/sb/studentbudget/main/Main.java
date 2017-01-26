@@ -26,7 +26,7 @@ public class Main {
         budget.addIncome("opintotuki", 400);
         budget.addIncome("säästöt", 200);
         
-        printer.printDetailedMonthlyBudget();
+        System.out.println(printer.printDetailedMonthlyBudget());
         
 
     }

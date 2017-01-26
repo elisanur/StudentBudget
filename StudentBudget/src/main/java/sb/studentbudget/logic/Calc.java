@@ -37,7 +37,7 @@ public class Calc {
     }
     
     public double countWeeklyBudget(){
-        return countBalance()/4;
+        return (countBalance()/4);
     }
     
     public double countDailyBudget(){

@@ -30,5 +30,8 @@ public class Budget {
         this.expense.add(new Money(name, amount));
     }
     
+    public String toString(){
+        return "";
+    }
     
 }
