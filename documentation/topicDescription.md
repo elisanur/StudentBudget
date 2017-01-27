@@ -28,3 +28,7 @@ I will implement a program that allows the user calculate the monthly, weekly an
 - Importing the budget calculations to a file, eg. pdf
 - Showing detailed calculations for weekly and daily budgets
 - Designing separated section for loans and savings
+
+### Class diagram
+
+![Class diagram](/documentation/classDiagram.jpg)
