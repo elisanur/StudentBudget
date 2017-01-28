@@ -6,3 +6,5 @@ This project is related to a course of object oriented programming with Java. Th
 ###Documentation
 
 [Description](documentation/topicDescription.md)
+
+[Record of Working Hours](documentation/recordOfWorkingHours.md)
