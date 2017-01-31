@@ -1,10 +1,11 @@
-package sb.studentbudget.budget;
+package sb.studentbudget.budgetTest;
 
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import sb.studentbudget.budget.Money;
 import static org.junit.Assert.*;
 
 public class MoneyTest {

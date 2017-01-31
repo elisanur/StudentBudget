@@ -1,4 +1,4 @@
-package sb.studentbudget.logic;
+package sb.studentbudget.logicTest;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -7,6 +7,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import sb.studentbudget.budget.Budget;
+import sb.studentbudget.logic.Calc;
+import sb.studentbudget.logic.Function;
 
 public class CalcTest {
 
@@ -32,8 +34,10 @@ public class CalcTest {
     @Test
     public void testCountIncome() {
         Budget budget = new Budget();
-        budget.addIncome("salary", 3000);
-        budget.addIncome("bonus", 200);
+        Function function = new Function(budget);
+
+        function.addIncome("salary", 3000);
+        function.addIncome("bonus", 200);
 
         Calc calc = new Calc(budget);
 
@@ -45,8 +49,10 @@ public class CalcTest {
     @Test
     public void testCountExpenses() {
         Budget budget = new Budget();
-        budget.addExpense("rent", 500);
-        budget.addExpense("phone", 40);
+        Function function = new Function(budget);
+
+        function.addExpense("rent", 500);
+        function.addExpense("phone", 40);
 
         Calc calc = new Calc(budget);
 
@@ -58,10 +64,12 @@ public class CalcTest {
     @Test
     public void testCountBalance() {
         Budget budget = new Budget();
-        budget.addExpense("rent", 500);
-        budget.addExpense("phone", 40);
-        budget.addIncome("salary", 3000);
-        budget.addIncome("bonus", 200);
+        Function function = new Function(budget);
+
+        function.addExpense("rent", 500);
+        function.addExpense("phone", 40);
+        function.addIncome("salary", 3000);
+        function.addIncome("bonus", 200);
 
         Calc calc = new Calc(budget);
 
@@ -73,10 +81,12 @@ public class CalcTest {
     @Test
     public void testCountWeeklyBudget() {
         Budget budget = new Budget();
-        budget.addExpense("rent", 500);
-        budget.addExpense("phone", 40);
-        budget.addIncome("salary", 3000);
-        budget.addIncome("bonus", 200);
+        Function function = new Function(budget);
+
+        function.addExpense("rent", 500);
+        function.addExpense("phone", 40);
+        function.addIncome("salary", 3000);
+        function.addIncome("bonus", 200);
 
         Calc calc = new Calc(budget);
 
@@ -88,10 +98,12 @@ public class CalcTest {
     @Test
     public void testCountDailyBudget() {
         Budget budget = new Budget();
-        budget.addExpense("rent", 500);
-        budget.addExpense("phone", 40);
-        budget.addIncome("salary", 3000);
-        budget.addIncome("bonus", 200);
+        Function function = new Function(budget);
+
+        function.addExpense("rent", 500);
+        function.addExpense("phone", 40);
+        function.addIncome("salary", 3000);
+        function.addIncome("bonus", 200);
 
         Calc calc = new Calc(budget);
 

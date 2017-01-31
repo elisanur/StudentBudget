@@ -3,17 +3,20 @@ package sb.studentbudget.gui;
 import java.util.Scanner;
 import sb.studentbudget.budget.Budget;
 import sb.studentbudget.logic.Calc;
+import sb.studentbudget.logic.Function;
 
 public class StudentBudgetProgram {
 
     private Scanner scan;
     private Budget budget;
     private Calc calc;
+    private Function function;
 
     public StudentBudgetProgram() {
         this.scan = new Scanner(System.in);
         this.budget = new Budget();
         this.calc = new Calc(budget);
+        this.function = new Function(budget);
 
     }
 
@@ -57,7 +60,7 @@ public class StudentBudgetProgram {
 
         System.out.println("State the amount (else set as zero): ");
         double amount = scan.nextDouble();
-        budget.addIncome(nimi, amount);
+        function.addIncome(nimi, amount);
     }
 
     private void addExpense() {
@@ -67,7 +70,7 @@ public class StudentBudgetProgram {
 
         System.out.println("State the amount (else set as zero): ");
         double amount = scan.nextDouble();
-        budget.addExpense(nimi, amount);
+        function.addExpense(nimi, amount);
 
     }
 

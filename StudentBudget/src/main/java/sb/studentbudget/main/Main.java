@@ -5,6 +5,7 @@ import sb.studentbudget.logic.Calc;
 import sb.studentbudget.gui.StudentBudgetProgram;
 import java.util.Scanner;
 import sb.studentbudget.logic.BudgetPrinter;
+import sb.studentbudget.logic.Function;
 
 public class Main {
 
@@ -14,30 +15,32 @@ public class Main {
 //        studentBudget.boot();
 //        Budget budget = new Budget();
 //        BudgetPrinter printer = new BudgetPrinter(budget);
-//        Calc calc = new Calc(budget);
+//        Calc calc = new Calc(budget
+//        Function function = new Function(budget);
 //        
-//        budget.addExpense("vuokra", 300);
-//        budget.addExpense("puhelin", 30);
-//        budget.addExpense("sähkö", 5);
-//        budget.addExpense("bussilippu", 27.4);
-//        budget.addExpense("ruoka", 150);
+//        function.addExpense("vuokra", 300);
+//        function.addExpense("puhelin", 30);
+//        function.addExpense("sähkö", 5);
+//        function.addExpense("bussilippu", 27.4);
+//        function.addExpense("ruoka", 150);
 //        
-//        budget.addIncome("opintotuki", 436);
-//        budget.addIncome("säästöt", 200);
+//        function.addIncome("opintotuki", 436);
+//        function.addIncome("säästöt", 200);
 
 
         Budget budget = new Budget();
         BudgetPrinter printer = new BudgetPrinter(budget);
         Calc calc = new Calc(budget);
+        Function function = new Function(budget);
 
-        budget.addExpense("vuokra", 300);
-        budget.addExpense("puhelin", 30);
-        budget.addExpense("sähkö", 5);
-        budget.addExpense("bussilippu", 25);
-        budget.addExpense("ruoka", 150);
+        function.addExpense("vuokra", 300);
+        function.addExpense("puhelin", 30);
+        function.addExpense("sähkö", 5);
+        function.addExpense("bussilippu", 25);
+        function.addExpense("ruoka", 150);
 
-        budget.addIncome("opintotuki", 400);
-        budget.addIncome("säästöt", 200);
+        function.addIncome("opintotuki", 400);
+        function.addIncome("säästöt", 200);
 
         System.out.println(printer.printDetailedMonthlyBudget());
 

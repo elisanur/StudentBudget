@@ -13,10 +13,10 @@ public class BudgetPrinter {
     }
 
     public String printDetailedMonthlyBudget() {
-        
+
         String review = "";
 
-        review +="Income:\n";
+        review += "Income:\n";
         for (int i = 0; i < this.budget.getIncome().size(); i++) {
             review += this.budget.getIncome().get(i).getName() + "\t";
             review += this.budget.getIncome().get(i).getAmount() + " €\n";
@@ -40,7 +40,7 @@ public class BudgetPrinter {
         } else {
             review += "Budget deficit: " + this.calc.countBalance() + " €";
         }
-        
+
         return review;
     }
 

@@ -1,16 +1,17 @@
-package sb.studentbudget.main;
+package sb.studentbudget.budgetTest;
 
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 import sb.studentbudget.budget.Budget;
+import static org.junit.Assert.*;
+import sb.studentbudget.logic.Function;
 
-public class MainTest {
+public class BudgetTest {
 
-    public MainTest() {
+    public BudgetTest() {
     }
 
     @BeforeClass
@@ -29,8 +30,13 @@ public class MainTest {
     public void tearDown() {
     }
 
-//    @Test
-//    public void hello() {
-//
-//    }
+    @Test
+    public void setNameTest() {
+        Budget budget = new Budget();
+        budget.setName("Christmas budget");
+        String answer = budget.getName();
+        
+        assertEquals("Christmas budget", answer);
+
+    }
 }
