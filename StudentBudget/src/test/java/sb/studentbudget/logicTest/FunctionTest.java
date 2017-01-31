@@ -152,4 +152,31 @@ public class FunctionTest {
 
     }
 
+    @Test
+    public void renameTitleTest() {
+        Budget budget = new Budget();
+        Function function = new Function(budget);
+
+        function.addIncome("student loan", 300);
+        function.renameTitle("income", 0, "student support");
+
+        String asnwer = budget.getIncome().get(0).getName();
+
+        assertEquals("student support", asnwer);
+
+    }
+
+    @Test
+    public void updateAmountTest() {
+        Budget budget = new Budget();
+        Function function = new Function(budget);
+
+        function.addIncome("student loan", 300);
+        function.updateAmount("income", 0, 310);
+
+        double answer = budget.getIncome().get(0).getAmount();
+
+        assertEquals(310, answer, 0.0005);
+    }
+
 }
