@@ -7,4 +7,5 @@
 <suppressions>
     <suppress files="GraphicUserInterface.java" checks="[a-zA-Z0-9]*"/>
     <suppress files="TextUserInterface.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="Main.java" checks="[a-zA-Z0-9]*"/>
 </suppressions>

@@ -11,4 +11,6 @@ Day | Hours | Description
            |      | 2. week 12.5h
 31.01.2017 | 2.0h | Improving code and programming new jUnit tests
            | 2.0h | Learning draw.io, doing class diagram, checking pit and checkstyle reports.
-03.02.2017 |
+03.02.2017 | 2.0h | Improving text user interface. Learning about FileWriter.
+	   | 5.0h | Programming a TextWriter class for FileWriter. Beginning to code graphic user interface.
+	   | 	  | 3.week 11h
