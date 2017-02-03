@@ -9,6 +9,6 @@ This project is related to a course of object oriented programming with Java. Th
 
 [Record of Working Hours](documentation/recordOfWorkingHours.md)
 
-[Pit report](https://htmlpreview.github.io/?https://github.com/kayttaja/javalabra/blob/master/documentation/pit-reports/aikaleimatähän/index.html)
+[Pit report](https://htmlpreview.github.io/?https://github.com/elisanur/javalabra/blob/master/documentation/pit-reports/aikaleimatähän/index.html)
 
-[CheckStyle report](https://htmlpreview.github.io/?https://github.com/kayttaja/javalabra/blob/master/documentation/checkstyle-report/checkstyle.html)
+[CheckStyle report](https://htmlpreview.github.io/?https://github.com/elisanur/StudentBudget/documentation/checkstyle-report/checkstyle.html)
