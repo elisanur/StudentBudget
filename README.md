@@ -11,4 +11,4 @@ This project is related to a course of object oriented programming with Java. Th
 
 [Pit report](https://htmlpreview.github.io/?https://github.com/elisanur/javalabra/blob/master/documentation/pit-reports/aikaleimatähän/index.html)
 
-[CheckStyle report](https://htmlpreview.github.io/?https://github.com/elisanur/StudentBudget/documentation/checkstyle-report/checkstyle.html)
+[CheckStyle report](https://htmlpreview.github.io/?https://github.com/elisanur/StudentBudget/master/documentation/checkstyle-report/checkstyle.html)
