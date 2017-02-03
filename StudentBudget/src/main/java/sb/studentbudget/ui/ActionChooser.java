@@ -5,12 +5,12 @@ import java.awt.event.ActionListener;
 import javax.swing.JRadioButton;
 
 public class ActionChooser implements ActionListener {
-    
+
     private JRadioButton income;
     private JRadioButton expense;
 
     public ActionChooser(JRadioButton income, JRadioButton expense) {
-        this.expense=expense;
+        this.expense = expense;
         this.income = income;
     }
 
