@@ -31,7 +31,7 @@ I will implement a program that allows the user calculate the monthly, weekly an
 
 ### Class diagram week 2
 
-![Class diagram](/documentation/classDiagram.jpg)
+![Class diagram](/documentation/classDiagramWeek2.jpg)
 
 ### Class diagram week 3
 
