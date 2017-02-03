@@ -1,0 +1,17 @@
+Income:
+opintotuki	436.0 €
+säästöt	200.0 €
+
+Expenses:
+vuokra	300.0 €
+puhelin	30.0 €
+sähkö	5.0 €
+bussilippu	27.4 €
+ruoka	150.0 €
+
+Budget review:
+Total monthly income: 636.0 €
+Total monthly expenses: 512.4 €
+Excess cash: 123,60 €
+Weekly budget: 30,90 €
+Daily budget: 4,12 €
