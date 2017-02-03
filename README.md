@@ -8,3 +8,7 @@ This project is related to a course of object oriented programming with Java. Th
 [Description](documentation/topicDescription.md)
 
 [Record of Working Hours](documentation/recordOfWorkingHours.md)
+
+[Pit report](https://htmlpreview.github.io/?https://github.com/kayttaja/javalabra/blob/master/documentation/pit-reports/aikaleimatähän/index.html)
+
+[CheckStyle report](https://htmlpreview.github.io/?https://github.com/kayttaja/javalabra/blob/master/documentation/checkstyle-report/checkstyle.html)
