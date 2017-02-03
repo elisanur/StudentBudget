@@ -61,9 +61,15 @@ public class GraphicUserInterface implements Runnable {
 
         buttonGroup.add(income);
         buttonGroup.add(expense);
+        
+        JButton button = new JButton("Okay");
+        
+        ActionChooser chooser = new ActionChooser(income, expense);
+        button.addActionListener(chooser);
 
         panel.add(income);
         panel.add(expense);
+        panel.add(button);
 
         return panel;
     }

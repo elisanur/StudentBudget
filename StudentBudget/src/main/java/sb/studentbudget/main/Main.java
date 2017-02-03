@@ -21,8 +21,7 @@ public class Main {
         There's also a TextWriter class which now creates a budget.txt file 
         from the budget review.
         I'm planning that later it's gonna create a .xls or .pdf file. 
-        
-        
+              
 */  
 
 //  TEXT USER INTERFACE:
@@ -31,26 +30,26 @@ public class Main {
 
 
 //  GRAPHIC USER INTERFACE:
-//        GraphicUserInterface ui = new GraphicUserInterface();
-//        SwingUtilities.invokeLater(ui);
+        GraphicUserInterface ui = new GraphicUserInterface();
+        SwingUtilities.invokeLater(ui);
 
 
 //  CODE FOR TESTING:
-
-        Budget budget = new Budget();
-        BudgetPrinter printer = new BudgetPrinter(budget);
-        Calc calc = new Calc(budget);
-        Function function = new Function(budget);
-        TextWriter writer = new TextWriter();
-
-        function.addExpense("vuokra", 300);
-        function.addExpense("puhelin", 30);
-        function.addExpense("sähkö", 5);
-        function.addExpense("bussilippu", 27.4);
-        function.addExpense("ruoka", 150);
-
-        function.addIncome("opintotuki", 436);
-        function.addIncome("säästöt", 200);
+//
+//        Budget budget = new Budget();
+//        BudgetPrinter printer = new BudgetPrinter(budget);
+//        Calc calc = new Calc(budget);
+//        Function function = new Function(budget);
+//        TextWriter writer = new TextWriter();
+//
+//        function.addExpense("vuokra", 300);
+//        function.addExpense("puhelin", 30);
+//        function.addExpense("sähkö", 5);
+//        function.addExpense("bussilippu", 27.4);
+//        function.addExpense("ruoka", 150);
+//
+//        function.addIncome("opintotuki", 436);
+//        function.addIncome("säästöt", 200);
 //
 //        function.addExpense("vuokra", 300);
 //        function.addExpense("puhelin", 30);
@@ -63,7 +62,7 @@ public class Main {
 //
 //        System.out.println(printer.printDetailedMonthlyBudget());
 //
-        writer.writeToFile(printer);
+//        writer.writeToFile(printer);
     }
 
 }
