@@ -6,6 +6,12 @@ import sb.studentbudget.logic.BudgetPrinter;
 import sb.studentbudget.logic.Calc;
 import sb.studentbudget.logic.Function;
 
+/**
+ * This class is for a text user interface, that's mainly for testing. Will be
+ * removed.
+ *
+ * @author Elisa Nurmi, Github profile: elisanur, elisa.nurmi@me.com
+ */
 public class TextUserInterface {
 
     private Scanner scan;
@@ -45,7 +51,7 @@ public class TextUserInterface {
             }
 
         }
-        
+
         System.out.println(this.printer.printDetailedMonthlyBudget());
 
     }

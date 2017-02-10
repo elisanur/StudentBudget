@@ -34,6 +34,16 @@
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
                 <version>1.1.8</version>
+                <configuration>
+                    <targetClasses>
+                        <param>sb.studentbudget.budget.*</param>
+                        <param>sb.studentbudget.logic.*</param>
+                    </targetClasses>
+                    <targetTests>
+                        <param>sb.studentbudget.budgetTest.*</param>
+                        <param>sb.studentbudget.logicTest.*</param>
+                    </targetTests>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

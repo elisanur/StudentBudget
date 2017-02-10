@@ -8,12 +8,21 @@ import java.util.Scanner;
 import javax.swing.SwingUtilities;
 import sb.studentbudget.ui.GraphicUserInterface;
 
-
+/**
+ *
+ *
+ * @author Elisa Nurmi, Github profile: elisanur, elisa.nurmi@me.com
+ */
 public class Main {
 
+    /**
+     *
+     * @param args
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException {
-        
-/*  Hello!
+
+        /*  Hello!
         This is a budget program for students and other users.
         You can see below section for graphic user interface and section for 
         text user interface.
@@ -22,17 +31,13 @@ public class Main {
         from the budget review.
         I'm planning that later it's gonna create a .xls or .pdf file. 
               
-*/  
-
+         */
 //  TEXT USER INTERFACE:
 //        TextUserInterface studentBudget = new TextUserInterface();
 //        studentBudget.runTextUserInterface();
-
-
 //  GRAPHIC USER INTERFACE:
         GraphicUserInterface ui = new GraphicUserInterface();
         SwingUtilities.invokeLater(ui);
-
 
 //  CODE FOR TESTING:
 //

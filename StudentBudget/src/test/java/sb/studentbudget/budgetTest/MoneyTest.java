@@ -10,6 +10,8 @@ import static org.junit.Assert.*;
 
 public class MoneyTest {
 
+    Money money;
+
     public MoneyTest() {
     }
 
@@ -23,6 +25,9 @@ public class MoneyTest {
 
     @Before
     public void setUp() {
+        double amount = 300;
+        String name = "loan";
+        money = new Money(name, amount);
     }
 
     @After
@@ -30,22 +35,32 @@ public class MoneyTest {
     }
 
     @Test
-    public void constructorSetsName() {
-        Money money = new Money("loan", 300);
-
+    public void getNameTest() {
         String answer = money.getName();
-
         assertEquals("loan", answer);
+
+    }
+    
+    @Test
+    public void getAmountTest() {
+        double answer = money.getAmount();
+        assertEquals(300, answer, 0.005);
+
+    }
+
+    @Test
+    public void constructorSetsName() {
+        money.setName("support");
+        String answer = money.getName();
+        assertEquals("support", answer);
 
     }
 
     @Test
     public void constructorSetsAmount() {
-        Money money = new Money("loan", 300);
-
+        money.setAmount(400);
         double answer = money.getAmount();
-
-        assertEquals(300, answer, 0.005);
+        assertEquals(400, answer, 0.005);
 
     }
 }

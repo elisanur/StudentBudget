@@ -39,19 +39,20 @@ public class BudgetPrinterTest {
         Function function = new Function(budget);
         BudgetPrinter printer = new BudgetPrinter(budget);
         Calc calc = new Calc(budget);
-        
+
         function.addExpense("vuokra", 300);
         function.addExpense("puhelin", 30);
         function.addExpense("sähkö", 5);
         function.addExpense("bussilippu", 25);
         function.addExpense("ruoka", 150);
-        
+
         function.addIncome("opintotuki", 400);
         function.addIncome("säästöt", 200);
-        
+
         String answer = printer.printDetailedMonthlyBudget();
-        
-        assertEquals("Income:\n"
+
+        assertEquals("Budget review:\n\n"
+                + "Income:\n"
                 + "opintotuki\t400.0 €\n"
                 + "säästöt\t200.0 €\n\n"
                 + "Expenses:\n"
@@ -60,7 +61,6 @@ public class BudgetPrinterTest {
                 + "sähkö\t5.0 €\n"
                 + "bussilippu\t25.0 €\n"
                 + "ruoka\t150.0 €\n\n"
-                + "Budget review:\n"
                 + "Total monthly income: 600.0 €\n"
                 + "Total monthly expenses: 510.0 €\n"
                 + "Excess cash: 90,00 €\n"

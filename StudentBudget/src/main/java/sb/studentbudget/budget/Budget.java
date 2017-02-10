@@ -2,12 +2,20 @@ package sb.studentbudget.budget;
 
 import java.util.ArrayList;
 
+/**
+ * This class holds ArrayLists of income and expenses.
+ *
+ * @author Elisa Nurmi, Github profile: elisanur, elisa.nurmi@me.com
+ */
 public class Budget {
 
     private String name;
     private ArrayList<Money> income;
     private ArrayList<Money> expense;
 
+    /**
+     *
+     */
     public Budget() {
         this.income = new ArrayList<Money>();
         this.expense = new ArrayList<Money>();
