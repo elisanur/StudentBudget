@@ -13,7 +13,7 @@ import sb.studentbudget.logic.BudgetPrinter;
  *
  * @author Elisa Nurmi, Github profile: elisanur, elisa.nurmi@me.com
  */
-public class ActionChooser implements ActionListener {
+public class ActionChooserListener implements ActionListener {
 
     private JRadioButton income;
     private JRadioButton expense;
@@ -37,7 +37,7 @@ public class ActionChooser implements ActionListener {
      * @param printer
      * @param button
      */
-    public ActionChooser(JTextArea budget, JRadioButton income, JRadioButton expense, JTextField setName, JTextField setAmount, Function function,
+    public ActionChooserListener(JTextArea budget, JRadioButton income, JRadioButton expense, JTextField setName, JTextField setAmount, Function function,
             BudgetPrinter printer, JButton button, JRadioButton add, JRadioButton delete) {
         this.expense = expense;
         this.income = income;
@@ -79,8 +79,8 @@ public class ActionChooser implements ActionListener {
         }
 
         this.budget.setText(this.printer.printDetailedMonthlyBudget());
-        this.setAmount.setText("");
-        this.setName.setText("");
+//        this.setAmount.setText("");
+//        this.setName.setText("");
 
     }
 }
