@@ -37,11 +37,15 @@
                 <configuration>
                     <targetClasses>
                         <param>sb.studentbudget.budget.*</param>
-                        <param>sb.studentbudget.logic.*</param>
+                        <param>sb.studentbudget.logic.BudgetPrinter</param>
+                        <param>sb.studentbudget.logic.Calc</param>
+                        <param>sb.studentbudget.logic.Function</param>
                     </targetClasses>
                     <targetTests>
                         <param>sb.studentbudget.budgetTest.*</param>
-                        <param>sb.studentbudget.logicTest.*</param>
+                        <param>sb.studentbudget.logicTest.BudgetPrinterTest</param>
+                        <param>sb.studentbudget.logicTest.CalcTest</param>
+                        <param>sb.studentbudget.logicTest.FunctionTest</param>
                     </targetTests>
                 </configuration>
             </plugin>
