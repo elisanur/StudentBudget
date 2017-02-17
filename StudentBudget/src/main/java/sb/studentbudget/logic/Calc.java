@@ -12,8 +12,9 @@ public class Calc {
     private Budget budget;
 
     /**
-     *
-     * @param budget
+     * Constructor initialises budget that's being used for all calculations.
+     * 
+     * @param budget Budget object that specifies which budget is being handled.
      */
     public Calc(Budget budget) {
         this.budget = budget;

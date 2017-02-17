@@ -11,9 +11,10 @@ public class Money {
     private String name;
 
     /**
-     *
-     * @param name
-     * @param amount
+     * Constructor initialises attributes from given String name and double amount.
+     * 
+     * @param name name String from user's input 
+     * @param amount amount Double from user's input
      */
     public Money(String name, double amount) {
         this.amount = amount;

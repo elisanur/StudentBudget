@@ -11,30 +11,21 @@ import javax.swing.JFileChooser;
 public class TextWriter {
 
     /**
-     *
-     * @throws IOException
-     */
-    public TextWriter() throws IOException {
-    }
-
-    /**
      * Writes budget review to .txt -file using the BudgetPrinter.
      *
-     * @param printer BudgetPrinter-type printer
-     * @param fileChooser
-     * @throws IOException
+     * @param printer BudgetPrinter object
+     * @param fileChooser JFileChooser object
      *
      * @see sb.studentbudget.logic.BudgetPrinter#printDetailedMonthlyBudget()
      */
-    public void writeToFile(BudgetPrinter printer, JFileChooser fileChooser) throws IOException {
+    public void writeToFile(BudgetPrinter printer, JFileChooser fileChooser) {
 
         try {
             FileWriter fw = new FileWriter(fileChooser.getSelectedFile() + ".txt");
             fw.write(printer.printDetailedMonthlyBudget());
             fw.flush();
             fw.close();
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        } catch (Exception e) {
         }
     }
 

@@ -39,12 +39,12 @@ public class BudgetTest {
     public void tearDown() {
     }
 
-    @Test
-    public void constructorSetsNameTest() {
-        String answer = budget.getName();
-        assertEquals("Budget", answer);
-
-    }
+//    @Test
+//    public void constructorSetsNameTest() {
+//        String answer = budget.getName();
+//        assertEquals("Budget", answer);
+//
+//    }
 
     @Test
     public void constructorCreatesIncomeArrayListTest() {
@@ -60,12 +60,12 @@ public class BudgetTest {
 
     }
 
-    @Test
-    public void getNameTest() {
-        String answer = budget.getName();
-        assertEquals("Budget", answer);
-
-    }
+//    @Test
+//    public void getNameTest() {
+//        String answer = budget.getName();
+//        assertEquals("Budget", answer);
+//
+//    }
 
     @Test
     public void getIncomeTest() {
@@ -80,19 +80,19 @@ public class BudgetTest {
         assertEquals(this.expense, answer);
 
     }
+//
+//    @Test
+//    public void toStringTest() {
+//        String answer = this.budget.getName();
+//        assertEquals("Budget", answer);
+//    }
 
-    @Test
-    public void toStringTest() {
-        String answer = this.budget.getName();
-        assertEquals("Budget", answer);
-    }
-
-    @Test
-    public void setNameTest() {
-        budget.setName("Christmas budget");
-        String answer = budget.getName();
-
-        assertEquals("Christmas budget", answer);
-
-    }
+//    @Test
+//    public void setNameTest() {
+//        budget.setName("Christmas budget");
+//        String answer = budget.getName();
+//
+//        assertEquals("Christmas budget", answer);
+//
+//    }
 }

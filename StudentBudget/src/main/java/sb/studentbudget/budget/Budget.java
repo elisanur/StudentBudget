@@ -9,26 +9,27 @@ import java.util.ArrayList;
  */
 public class Budget {
 
-    private String name;
+//    private String name;
     private ArrayList<Money> income;
     private ArrayList<Money> expense;
 
     /**
-     *
+     * Constructor that initialises attributes for Budget object.
+     * Creates ArrayList "income" and ArrayList "expense".
      */
     public Budget() {
         this.income = new ArrayList<Money>();
         this.expense = new ArrayList<Money>();
-        this.name = "Budget";
+//        this.name = "Budget";
     }
 
-    public String getName() {
-        return name;
-    }
+//    public String getName() {
+//        return name;
+//    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 
     public ArrayList<Money> getIncome() {
         return this.income;
@@ -38,8 +39,8 @@ public class Budget {
         return this.expense;
     }
 
-    public String toString() {
-        return this.name;
-    }
+//    public String toString() {
+//        return this.name;
+//    }
 
 }

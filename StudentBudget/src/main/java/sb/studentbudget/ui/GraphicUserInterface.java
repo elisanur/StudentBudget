@@ -172,26 +172,26 @@ public class GraphicUserInterface implements Runnable {
         c.insets = new Insets(0, 5, 0, 5);
         panel.add(setAmount, c);
 
-        JButton button = new JButton("Okay");
+        JButton okayButton = new JButton("Okay");
         ActionChooserListener chooser = new ActionChooserListener(budget, income, expense, setName,
-                setAmount, this.function, this.printer, button, add, delete);
-        button.addActionListener(chooser);
+                setAmount, this.function, this.printer, add, delete);
+        okayButton.addActionListener(chooser);
 
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
         c.gridy = 11;
         c.weightx = 3;
         c.insets = new Insets(15, 5, 0, 5);
-        panel.add(button, c);
+        panel.add(okayButton, c);
 
         c.gridx = 0;
         c.gridy = 12;
         c.weightx = 3;
 
-        JButton button2 = new JButton("Export budget review");
+        JButton exportButton = new JButton("Export budget review");
         ExportListener el = new ExportListener(this.printer, this.textWriter);
-        button2.addActionListener(el);
-        panel.add(button2, c);
+        exportButton.addActionListener(el);
+        panel.add(exportButton, c);
 
         budget.setText(this.printer.printDetailedMonthlyBudget());
 //        budget.setPreferredSize(new Dimension(500, 300));

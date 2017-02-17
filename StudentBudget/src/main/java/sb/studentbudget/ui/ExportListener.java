@@ -1,26 +1,31 @@
 package sb.studentbudget.ui;
 
-import java.awt.BorderLayout;
-import java.awt.Container;
-import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileWriter;
 import javax.swing.JFileChooser;
-import javax.swing.JPanel;
 import sb.studentbudget.logic.BudgetPrinter;
 import sb.studentbudget.logic.TextWriter;
 
 /**
- *
- * @author elisanur
+ * This class listens "Export budget review" button in graphic user interface.
+ * The method in this class uses TextWriter object that tries to write a file to 
+ * selected target file. This class is separated from other functions because it is 
+ * left out from pit-tests.
+ * 
+ * @author Elisa Nurmi, Github profile: elisanur, elisa.nurmi@me.com
  */
 public class ExportListener implements ActionListener {
 
     private TextWriter writer;
     private BudgetPrinter printer;
 
+/**
+ * Constructor that initialises printer and writer attributes. 
+ * 
+ * @param printer BudgetPrinter object used for getting the budget review string
+ * @param writer TextWriter object used for writing file
+ */    
+    
     public ExportListener(BudgetPrinter printer, TextWriter writer) {
         this.writer = writer;
         this.printer = printer;
@@ -34,9 +39,7 @@ public class ExportListener implements ActionListener {
             try {
                 this.writer.writeToFile(this.printer, fileChooser);
             } catch (Exception ex) {
-                ex.printStackTrace();
             }
-
         }
     }
 

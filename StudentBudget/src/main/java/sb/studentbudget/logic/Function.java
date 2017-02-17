@@ -15,8 +15,9 @@ public class Function {
     private Budget budget;
 
     /**
+     * Constructor that creates a new Function object.
      *
-     * @param budget
+     * @param budget Budget object specifies which budget is being handled
      */
     public Function(Budget budget) {
         this.budget = budget;
