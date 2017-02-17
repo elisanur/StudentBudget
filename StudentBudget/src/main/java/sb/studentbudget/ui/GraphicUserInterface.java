@@ -71,7 +71,7 @@ public class GraphicUserInterface implements Runnable {
 //        panel.setLayout(new GridBagLayout());
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         GridBagConstraints c = new GridBagConstraints();
-        
+
         c.fill = GridBagConstraints.HORIZONTAL;
         c.anchor = GridBagConstraints.PAGE_START;
         c.gridx = 0;
@@ -79,11 +79,11 @@ public class GraphicUserInterface implements Runnable {
         c.ipady = 10;
         c.weightx = 1.0;
         c.insets = new Insets(0, 5, 0, 5);
-        
+
         JTextArea budget = new JTextArea();
 
         JLabel question1 = new JLabel("Would you like to add or delete a title?");
-        
+
         panel.add(question1, c);
 
         ButtonGroup buttonGroup1 = new ButtonGroup();
@@ -189,11 +189,10 @@ public class GraphicUserInterface implements Runnable {
         c.weightx = 3;
 
         JButton button2 = new JButton("Export budget review");
-        ExportListener el = new ExportListener(this.printer);
+        ExportListener el = new ExportListener(this.printer, this.textWriter);
         button2.addActionListener(el);
         panel.add(button2, c);
 
-        
         budget.setText(this.printer.printDetailedMonthlyBudget());
 //        budget.setPreferredSize(new Dimension(500, 300));
         budget.setEditable(false);

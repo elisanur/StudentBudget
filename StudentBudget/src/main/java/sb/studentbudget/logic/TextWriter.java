@@ -1,6 +1,7 @@
 package sb.studentbudget.logic;
 
 import java.io.*;
+import javax.swing.JFileChooser;
 
 /**
  * This class is for saving the budget as a text file.
@@ -9,31 +10,32 @@ import java.io.*;
  */
 public class TextWriter {
 
-    private FileWriter writer;
-
     /**
      *
      * @throws IOException
      */
     public TextWriter() throws IOException {
-        File file = new File("budget.txt");
-        file.createNewFile();
-        this.writer = new FileWriter(file);
-
     }
 
     /**
-     * Writes budget review to "budget.txt" -file using the BudgetPrinter.
+     * Writes budget review to .txt -file using the BudgetPrinter.
      *
      * @param printer BudgetPrinter-type printer
+     * @param fileChooser
      * @throws IOException
      *
      * @see sb.studentbudget.logic.BudgetPrinter#printDetailedMonthlyBudget()
      */
-    public void writeToFile(BudgetPrinter printer) throws IOException {
-        writer.write(printer.printDetailedMonthlyBudget());
-        writer.flush();
-        writer.close();
+    public void writeToFile(BudgetPrinter printer, JFileChooser fileChooser) throws IOException {
+
+        try {
+            FileWriter fw = new FileWriter(fileChooser.getSelectedFile() + ".txt");
+            fw.write(printer.printDetailedMonthlyBudget());
+            fw.flush();
+            fw.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
 }

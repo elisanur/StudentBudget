@@ -18,9 +18,11 @@ import sb.studentbudget.logic.TextWriter;
  */
 public class ExportListener implements ActionListener {
 
+    private TextWriter writer;
     private BudgetPrinter printer;
 
-    public ExportListener(BudgetPrinter printer) {
+    public ExportListener(BudgetPrinter printer, TextWriter writer) {
+        this.writer = writer;
         this.printer = printer;
     }
 
@@ -30,10 +32,7 @@ public class ExportListener implements ActionListener {
         int returnValue = fileChooser.showSaveDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             try {
-                FileWriter fw = new FileWriter(fileChooser.getSelectedFile() + ".txt");
-                fw.write(printer.printDetailedMonthlyBudget());
-                fw.flush();
-                fw.close();
+                this.writer.writeToFile(this.printer, fileChooser);
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
