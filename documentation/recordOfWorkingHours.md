@@ -21,3 +21,4 @@ Day | Hours | Description
 10.02.2017 | 4.0h | Writing new jUnit tests. Fixing and improving gui. Reporting.
 	   |      | 4.week 13.0h
 14.02.2017 | 7.0h | Getting filewriter work with gui. Creating export file option.
+17.02.2017 | 7.0h | Cleaning code. Fixing javadocs. Creating sequence diagrams.

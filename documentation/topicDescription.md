@@ -32,3 +32,11 @@ I will implement a program that allows the user calculate the monthly, weekly an
 ### Class diagram
 
 ![Class diagram](/documentation/classDiagramWeek5.png)
+
+### Sequence diagram 1
+
+![Sequence diagram](/documentation/sequenceDiagram1.png)
+
+### Sequence diagram 2
+
+![Sequence diagram](/documentation/sequenceDiagram2.png)
