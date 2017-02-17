@@ -12,22 +12,17 @@ I will implement a program that allows the user calculate the monthly, weekly an
 
 - Composing an expense title
 - Composing an income title
-- Assignin the amount for income/expence and modifying it later
 - Removing a title
+- Exporting budget review in a .txt file
 
 ### Program's print options
 
-- Monthly budget
-- Weekly budget
-- Daily Budget
-
-- Budget calculations show that how much money is there in total and how much there is to save/spend or if the balance is negative.
+- Budget review shows how much money is there in total and how much there is to save/spend or if the balance is negative.
 
 ### Possibilities for extensions
 
-- Importing the budget calculations to a file, eg. pdf
-- Showing detailed calculations for weekly and daily budgets
-- Designing separated section for loans and savings
+- Importing the budget calculations to a others file types, eg. pdf
+- Separated section for loans and savings
 
 ### Class diagram
 
