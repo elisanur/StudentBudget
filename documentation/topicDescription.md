@@ -29,14 +29,6 @@ I will implement a program that allows the user calculate the monthly, weekly an
 - Showing detailed calculations for weekly and daily budgets
 - Designing separated section for loans and savings
 
-### Class diagram week 2
+### Class diagram
 
-![Class diagram](/documentation/classDiagramWeek2.jpg)
-
-### Class diagram week 3
-
-![Class diagram](/documentation/classDiagramWeek3.png)
-
-### Class diagram week 4
-
-![Class diagram](/documentation/classDiagramWeek4.png)
+![Class diagram](/documentation/classDiagramWeek5.png)
