@@ -8,9 +8,9 @@ import javax.swing.*;
 import sb.studentbudget.logic.BudgetPrinter;
 
 /**
- * This class manages graphic user interface functions for adding items to income and expense
- * ArrayLists and updating budget review textArea. This class is a listener for 
- * the "Okay" button in graphic user interface.
+ * This class manages graphic user interface functions for adding items to
+ * income and expense ArrayLists and updating budget review textArea. This class
+ * is a listener for the "Okay" button in graphic user interface.
  *
  * @author Elisa Nurmi, Github profile: elisanur, elisa.nurmi@me.com
  */
@@ -19,8 +19,8 @@ public class ActionChooserListener implements ActionListener {
     private JRadioButton income;
     private JRadioButton expense;
     private JButton okayButton;
-    private JTextField setName;
-    private JTextField setAmount;
+    private JTextField title;
+    private JTextField amount;
     private Function function;
     private JTextArea budget;
     private BudgetPrinter printer;
@@ -29,23 +29,27 @@ public class ActionChooserListener implements ActionListener {
 
     /**
      * Constructor that initialises attributes for ActionChooserListener object.
-     * 
+     *
      * @param budget Budget object
-     * @param income JRadioButton. If selected, sets income list to be handled in Budget object.
-     * @param expense JRadioButton. If selected, sets expenses list to be handled in Budget object.
-     * @param setName JTextField. Reads the input from user.
-     * @param setAmount JTextField. Reads the input from user.
-     * @param function Function object that has all functions for handling Budget object.
-     * @param printer BudgetPrinter object that is used for printing budget review.
+     * @param income JRadioButton. If selected, sets income list to be handled
+     * in Budget object.
+     * @param expense JRadioButton. If selected, sets expenses list to be
+     * handled in Budget object.
+     * @param title JTextField. Reads the input from user.
+     * @param amount JTextField. Reads the input from user.
+     * @param function Function object that has all functions for handling
+     * Budget object.
+     * @param printer BudgetPrinter object that is used for printing budget
+     * review.
      * @param add JRadioButton that listens if add is selected
      * @param delete JRadioButton that listens if delete is selected
      */
-    public ActionChooserListener(JTextArea budget, JRadioButton income, JRadioButton expense, JTextField setName, JTextField setAmount, Function function,
+    public ActionChooserListener(JTextArea budget, JRadioButton income, JRadioButton expense, JTextField title, JTextField amount, Function function,
             BudgetPrinter printer, JRadioButton add, JRadioButton delete) {
         this.expense = expense;
         this.income = income;
-        this.setAmount = setAmount;
-        this.setName = setName;
+        this.amount = amount;
+        this.title = title;
         this.function = function;
         this.budget = budget;
         this.printer = printer;
@@ -65,24 +69,37 @@ public class ActionChooserListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
 
-        if (this.add.isSelected()) {
-            if (this.income.isSelected()) {
-                this.function.addIncome(this.setName.getText(), Double.parseDouble(this.setAmount.getText()));
-            } else if (this.expense.isSelected()) {
-                this.function.addExpense(this.setName.getText(), Double.parseDouble(this.setAmount.getText()));
+        try {
+            
+            
+
+            if (this.add.isSelected()) {
+                double a = Double.parseDouble(this.amount.getText());
+                
+                if (this.income.isSelected()) {
+                    this.function.addIncome(this.title.getText(), a);
+                } else if (this.expense.isSelected()) {
+                    this.function.addExpense(this.title.getText(), a);
+                }
+
+                this.amount.setText("");
+                this.title.setText("");
+                this.budget.setText(this.printer.printDetailedMonthlyBudget());
+
+            } else if (this.delete.isSelected()) {
+                if (this.income.isSelected()) {
+                    this.function.removeIncomeByName(this.title.getText());
+                } else if (this.expense.isSelected()) {
+                    this.function.removeExpenseByName(this.title.getText());
+                }
+
+                this.amount.setText("");
+                this.title.setText("");
+                this.budget.setText(this.printer.printDetailedMonthlyBudget());
             }
 
-        } else if (this.delete.isSelected()) {
-            if (this.income.isSelected()) {
-                this.function.removeIncomeByName(this.setName.getText());
-            } else if (this.expense.isSelected()) {
-                this.function.removeExpenseByName(this.setName.getText());
-            }
+        } catch (Exception e) {
         }
-
-        this.budget.setText(this.printer.printDetailedMonthlyBudget());
-//        this.setAmount.setText("");
-//        this.setName.setText("");
 
     }
 }
