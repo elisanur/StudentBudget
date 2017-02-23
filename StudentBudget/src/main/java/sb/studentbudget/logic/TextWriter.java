@@ -18,11 +18,11 @@ public class TextWriter {
      *
      * @see sb.studentbudget.logic.BudgetPrinter#printDetailedMonthlyBudget()
      */
-    public void writeToFile(BudgetPrinter printer, JFileChooser fileChooser) {
+    public void writeToFile(String review, JFileChooser fileChooser) {
 
         try {
             FileWriter fw = new FileWriter(fileChooser.getSelectedFile() + ".txt");
-            fw.write(printer.printDetailedMonthlyBudget());
+            fw.write(review);
             fw.flush();
             fw.close();
         } catch (Exception e) {

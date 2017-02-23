@@ -3,6 +3,7 @@ package sb.studentbudget.ui;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFileChooser;
+import sb.studentbudget.budget.Budget;
 import sb.studentbudget.logic.BudgetPrinter;
 import sb.studentbudget.logic.TextWriter;
 
@@ -16,8 +17,7 @@ import sb.studentbudget.logic.TextWriter;
  */
 public class ExportListener implements ActionListener {
 
-    private TextWriter writer;
-    private BudgetPrinter printer;
+    private Budget budget;
 
 /**
  * Constructor that initialises printer and writer attributes. 
@@ -26,9 +26,8 @@ public class ExportListener implements ActionListener {
  * @param writer TextWriter object used for writing file
  */    
     
-    public ExportListener(BudgetPrinter printer, TextWriter writer) {
-        this.writer = writer;
-        this.printer = printer;
+    public ExportListener(Budget budget) {
+        this.budget = budget;
     }
 
     @Override
@@ -37,7 +36,7 @@ public class ExportListener implements ActionListener {
         int returnValue = fileChooser.showSaveDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             try {
-                this.writer.writeToFile(this.printer, fileChooser);
+                this.budget.getPrinter().writeToFile(fileChooser);
             } catch (Exception ex) {
             }
         }

@@ -1,15 +1,11 @@
 package sb.studentbudget.ui;
 
 import sb.studentbudget.budget.Budget;
-import sb.studentbudget.logic.BudgetPrinter;
-import sb.studentbudget.logic.Calc;
-import sb.studentbudget.logic.Function;
 
 import java.awt.*;
 import java.io.IOException;
 import java.util.Scanner;
 import javax.swing.*;
-import sb.studentbudget.logic.TextWriter;
 
 /**
  * This class set's up the graphic user interface.
@@ -21,10 +17,6 @@ public class GraphicUserInterface implements Runnable {
     private JFrame frame;
     private Scanner scan;
     private Budget budget;
-    private Calc calc;
-    private Function function;
-    private BudgetPrinter printer;
-    private TextWriter textWriter;
 
     /**
      *
@@ -32,10 +24,6 @@ public class GraphicUserInterface implements Runnable {
     public GraphicUserInterface() throws IOException {
         this.scan = new Scanner(System.in);
         this.budget = new Budget();
-        this.calc = new Calc(budget);
-        this.function = new Function(budget);
-        this.printer = new BudgetPrinter(budget);
-        this.textWriter = new TextWriter();
     }
 
     @Override
@@ -80,7 +68,7 @@ public class GraphicUserInterface implements Runnable {
         c.weightx = 1.0;
         c.insets = new Insets(0, 5, 0, 5);
 
-        JTextArea budget = new JTextArea();
+        JTextArea budgetReview = new JTextArea();
 
         JLabel question1 = new JLabel("Would you like to add or delete a title?");
 
@@ -145,14 +133,14 @@ public class GraphicUserInterface implements Runnable {
         c.insets = new Insets(10, 5, 0, 5);
         panel.add(title, c);
 
-        JTextField setName = new JTextField();
+        JTextField titleField = new JTextField();
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
         c.gridy = 8;
         c.ipady = 10;
         c.weightx = 3;
         c.insets = new Insets(0, 5, 0, 5);
-        panel.add(setName, c);
+        panel.add(titleField, c);
 
         JLabel amount = new JLabel("Amount:");
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -163,18 +151,18 @@ public class GraphicUserInterface implements Runnable {
         c.insets = new Insets(10, 5, 0, 5);
         panel.add(amount, c);
 
-        JTextField setAmount = new JTextField();
+        JTextField amountField = new JTextField();
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
         c.gridy = 10;
         c.ipady = 10;
         c.weightx = 3;
         c.insets = new Insets(0, 5, 0, 5);
-        panel.add(setAmount, c);
+        panel.add(amountField, c);
 
         JButton okayButton = new JButton("Okay");
-        ActionChooserListener chooser = new ActionChooserListener(budget, income, expense, setName,
-                setAmount, this.function, this.printer, add, delete);
+        ActionChooserListener chooser = new ActionChooserListener(budgetReview, income, expense, titleField,
+                amountField, add, delete, this.budget);
         okayButton.addActionListener(chooser);
 
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -189,14 +177,14 @@ public class GraphicUserInterface implements Runnable {
         c.weightx = 3;
 
         JButton exportButton = new JButton("Export budget review");
-        ExportListener el = new ExportListener(this.printer, this.textWriter);
+        ExportListener el = new ExportListener(this.budget);
         exportButton.addActionListener(el);
         panel.add(exportButton, c);
 
-        budget.setText(this.printer.printDetailedMonthlyBudget());
+        budgetReview.setText(this.budget.getPrinter().printDetailedMonthlyBudget());
 //        budget.setPreferredSize(new Dimension(500, 300));
-        budget.setEditable(false);
-        JScrollPane scroll = new JScrollPane(budget);
+        budgetReview.setEditable(false);
+        JScrollPane scroll = new JScrollPane(budgetReview);
         scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 //        scroll.setPreferredSize(new Dimension(500, 300));
         c.gridx = 0;
