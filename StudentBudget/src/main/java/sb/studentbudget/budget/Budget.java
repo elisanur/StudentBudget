@@ -11,7 +11,6 @@ import sb.studentbudget.logic.Function;
  */
 public class Budget {
 
-//    private String name;
     private ArrayList<Money> income;
     private ArrayList<Money> expense;
     private Function function;
@@ -19,23 +18,15 @@ public class Budget {
 
     /**
      * Constructor that initialises attributes for Budget object.
-     * Creates ArrayList "income" and ArrayList "expense".
+     * Creates ArrayList "income", ArrayList "expense", new Function and new BudgetPrinter.
      */
     public Budget() {
         this.income = new ArrayList<Money>();
         this.expense = new ArrayList<Money>();
         this.function = new Function(this);
         this.printer = new BudgetPrinter(this);
-//        this.name = "Budget";
+
     }
-
-//    public String getName() {
-//        return name;
-//    }
-
-//    public void setName(String name) {
-//        this.name = name;
-//    }
 
     public ArrayList<Money> getIncome() {
         return this.income;
@@ -52,9 +43,5 @@ public class Budget {
     public BudgetPrinter getPrinter(){
         return this.printer;
     }
-
-//    public String toString() {
-//        return this.name;
-//    }
 
 }

@@ -4,8 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFileChooser;
 import sb.studentbudget.budget.Budget;
-import sb.studentbudget.logic.BudgetPrinter;
-import sb.studentbudget.logic.TextWriter;
 
 /**
  * This class listens "Export budget review" button in graphic user interface.
@@ -15,18 +13,17 @@ import sb.studentbudget.logic.TextWriter;
  * 
  * @author Elisa Nurmi, Github profile: elisanur, elisa.nurmi@me.com
  */
-public class ExportListener implements ActionListener {
+public class ExportButtonListener implements ActionListener {
 
     private Budget budget;
 
 /**
- * Constructor that initialises printer and writer attributes. 
+ * Constructor that initialises budget attribute. 
  * 
- * @param printer BudgetPrinter object used for getting the budget review string
- * @param writer TextWriter object used for writing file
+ * @param budget Budget object
  */    
     
-    public ExportListener(Budget budget) {
+    public ExportButtonListener(Budget budget) {
         this.budget = budget;
     }
 

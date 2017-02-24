@@ -26,11 +26,11 @@ I will implement a program that allows the user calculate the monthly, weekly an
 
 ### Class diagram
 
-![Class diagram](/documentation/classDiagramWeek5.png)
+![Class diagram](/documentation/ClassDiagram.png)
 
-### Sequence diagram 1
+### Sequence diagram - Add income
 
-![Sequence diagram](/documentation/sequenceDiagram1.png)
+![Sequence diagram](/documentation/sequenceDiagramAddIncome.png)
 
 ### Sequence diagram 2
 

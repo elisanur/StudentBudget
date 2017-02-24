@@ -12,7 +12,7 @@ import sb.studentbudget.budget.Budget;
  *
  * @author Elisa Nurmi, Github profile: elisanur, elisa.nurmi@me.com
  */
-public class ActionChooserListener implements ActionListener {
+public class ActionButtonListener implements ActionListener {
 
     private JRadioButton income;
     private JRadioButton expense;
@@ -38,7 +38,7 @@ public class ActionChooserListener implements ActionListener {
      * @param add JRadioButton that listens if add is selected
      * @param delete JRadioButton that listens if delete is selected
      */
-    public ActionChooserListener(JTextArea budgetReview, JRadioButton income,
+    public ActionButtonListener(JTextArea budgetReview, JRadioButton income,
             JRadioButton expense, JTextField title, JTextField amount,
             JRadioButton add, JRadioButton delete, Budget budget) {
         this.expense = expense;
@@ -73,9 +73,9 @@ public class ActionChooserListener implements ActionListener {
                 } else if (this.expense.isSelected()) {
                     this.budget.getFunction().addExpense(this.title.getText(), a);
                 }
-
-                this.amount.setText("");
+                
                 this.title.setText("");
+                this.amount.setText("");
                 this.budgetReview.setText(this.budget.getPrinter().printDetailedMonthlyBudget());
 
             } else if (this.delete.isSelected()) {
@@ -84,9 +84,9 @@ public class ActionChooserListener implements ActionListener {
                 } else if (this.expense.isSelected()) {
                     this.budget.getFunction().removeExpenseByName(this.title.getText());
                 }
-
-                this.amount.setText("");
+                
                 this.title.setText("");
+                this.amount.setText("");
                 this.budgetReview.setText(this.budget.getPrinter().printDetailedMonthlyBudget());
             }
 

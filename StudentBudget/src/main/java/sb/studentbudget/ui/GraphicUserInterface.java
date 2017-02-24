@@ -160,10 +160,10 @@ public class GraphicUserInterface implements Runnable {
         c.insets = new Insets(0, 5, 0, 5);
         panel.add(amountField, c);
 
-        JButton okayButton = new JButton("Okay");
-        ActionChooserListener chooser = new ActionChooserListener(budgetReview, income, expense, titleField,
+        JButton okayButton = new JButton("Action!");
+        ActionButtonListener abl = new ActionButtonListener(budgetReview, income, expense, titleField,
                 amountField, add, delete, this.budget);
-        okayButton.addActionListener(chooser);
+        okayButton.addActionListener(abl);
 
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
@@ -177,8 +177,8 @@ public class GraphicUserInterface implements Runnable {
         c.weightx = 3;
 
         JButton exportButton = new JButton("Export budget review");
-        ExportListener el = new ExportListener(this.budget);
-        exportButton.addActionListener(el);
+        ExportButtonListener ebl = new ExportButtonListener(this.budget);
+        exportButton.addActionListener(ebl);
         panel.add(exportButton, c);
 
         budgetReview.setText(this.budget.getPrinter().printDetailedMonthlyBudget());
