@@ -10,7 +10,7 @@ Day | Hours | Description
 31.01.2017 | 2.0h | Improving code and programming new jUnit tests.
 31.01.2017 | 2.0h | Learning draw.io, doing class diagram, checking pit and checkstyle reports.
 03.02.2017 | 2.0h | Improving text user interface. Learning about FileWriter.
-	   | 6.0h | Programming a TextWriter class. Beginning to code graphic user interface. Improving class diagram. Generating reports.
+03.02.2017 | 6.0h | Programming a TextWriter class. Beginning to code graphic user interface. Improving class diagram. Generating reports.
 06.02.2017 | 3.0h | Trying GridLayout for gui, didnt work.
 09.02.2017 | 2.0h | Trying GridBagLayout for gui, still a lot of problems.
 10.02.2017 | 2.0h | Trying to solve problems with GridBagLayout.
