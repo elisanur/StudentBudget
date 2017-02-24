@@ -25,25 +25,25 @@ public class Function {
     /**
      * Adds new Money-type income to ArrayList of income.
      *
-     * @param name name string given by user, used as title
+     * @param title name string given by user, used as title
      * @param amount amount double given by user
      *
      * @see sb.studentbudget.budget.Budget#getIncome()
      */
-    public void addIncome(String name, double amount) {
-        this.budget.getIncome().add(new Money(name, amount));
+    public void addIncome(String title, double amount) {
+        this.budget.getIncome().add(new Money(title, amount));
     }
 
     /**
      * Adds new Money-type expense to ArrayList of expenses.
      *
-     * @param name name string given by user, used as title
+     * @param title name string given by user, used as title
      * @param amount amount double given by user
      *
      * @see sb.studentbudget.budget.Budget#getExpense()
      */
-    public void addExpense(String name, double amount) {
-        this.budget.getExpense().add(new Money(name, amount));
+    public void addExpense(String title, double amount) {
+        this.budget.getExpense().add(new Money(title, amount));
     }
 
     /**
@@ -60,6 +60,7 @@ public class Function {
         for (int i = 0; i < this.budget.getIncome().size(); i++) {
             if (this.budget.getIncome().get(i).compareTo(name) == 0) {
                 this.budget.getIncome().remove(i);
+                i--;
             }
         }
     }

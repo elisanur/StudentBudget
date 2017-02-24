@@ -180,7 +180,7 @@ public class GraphicUserInterface implements Runnable {
         exportButton.addActionListener(ebl);
         panel.add(exportButton, c);
 
-        budgetReview.setText(this.budget.getPrinter().printDetailedMonthlyBudget());
+        budgetReview.setText(this.budget.getPrinter().budgetReview());
         JScrollPane scroll = new JScrollPane(budgetReview);
         scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         

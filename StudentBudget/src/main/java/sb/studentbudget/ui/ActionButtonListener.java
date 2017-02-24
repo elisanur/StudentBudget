@@ -65,7 +65,8 @@ public class ActionButtonListener implements ActionListener {
 
         try {
 
-            if (this.add.isSelected()) {
+            if (this.add.isSelected() && this.add.getText().length() <= 50
+                    && !this.title.getText().isEmpty()) {
                 double a = Double.parseDouble(this.amount.getText());
 
                 if (this.income.isSelected()) {
@@ -73,10 +74,10 @@ public class ActionButtonListener implements ActionListener {
                 } else if (this.expense.isSelected()) {
                     this.budget.getFunction().addExpense(this.title.getText(), a);
                 }
-                
+
                 this.title.setText("");
                 this.amount.setText("");
-                this.budgetReview.setText(this.budget.getPrinter().printDetailedMonthlyBudget());
+                this.budgetReview.setText(this.budget.getPrinter().budgetReview());
 
             } else if (this.delete.isSelected()) {
                 if (this.income.isSelected()) {
@@ -84,10 +85,10 @@ public class ActionButtonListener implements ActionListener {
                 } else if (this.expense.isSelected()) {
                     this.budget.getFunction().removeExpenseByName(this.title.getText());
                 }
-                
+
                 this.title.setText("");
                 this.amount.setText("");
-                this.budgetReview.setText(this.budget.getPrinter().printDetailedMonthlyBudget());
+                this.budgetReview.setText(this.budget.getPrinter().budgetReview());
             }
 
         } catch (Exception e) {

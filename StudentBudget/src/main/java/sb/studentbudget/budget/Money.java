@@ -30,14 +30,12 @@ public class Money {
         return title;
     }
 
-    
     /**
-     * Method compares to Money objects by their name
+     * Method compares to Money objects by their name.
      *
      * @param title title String from user's input
      * @return returns 0 is the title is the same and -1 if not
      */
-
     public int compareTo(String title) {
         if (title.equals(this.title)) {
             return 0;

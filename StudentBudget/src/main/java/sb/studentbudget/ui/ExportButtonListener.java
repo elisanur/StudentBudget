@@ -33,7 +33,7 @@ public class ExportButtonListener implements ActionListener {
         int returnValue = fileChooser.showSaveDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             try {
-                this.budget.getPrinter().getWriter().writeToFile(this.budget.getPrinter().printDetailedMonthlyBudget(), fileChooser);
+                this.budget.getPrinter().getWriter().writeToFile(this.budget.getPrinter().budgetReview(), fileChooser);
             } catch (Exception ex) {
             }
         }

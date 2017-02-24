@@ -17,8 +17,9 @@ public class Budget {
     private final BudgetPrinter printer;
 
     /**
-     * Constructor that initialises attributes for Budget object.
-     * Creates ArrayList "income", ArrayList "expense", new Function and new BudgetPrinter.
+     * Constructor that initialises attributes for Budget object. Creates
+     * ArrayList "income", ArrayList "expense", new Function and new
+     * BudgetPrinter.
      */
     public Budget() {
         this.income = new ArrayList<>();
@@ -35,12 +36,12 @@ public class Budget {
     public ArrayList<Money> getExpense() {
         return this.expense;
     }
-    
-    public Function getFunction(){
+
+    public Function getFunction() {
         return this.function;
     }
-    
-    public BudgetPrinter getPrinter(){
+
+    public BudgetPrinter getPrinter() {
         return this.printer;
     }
 

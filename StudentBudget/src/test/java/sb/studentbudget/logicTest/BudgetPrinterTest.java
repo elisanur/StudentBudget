@@ -53,7 +53,7 @@ public class BudgetPrinterTest {
     @Test
     public void TestBudgetPrinter() {
 
-        String answer = this.budget.getPrinter().printDetailedMonthlyBudget();
+        String answer = this.budget.getPrinter().budgetReview();
 
         assertEquals("Budget review:\n\n"
                 + "Income:\n"

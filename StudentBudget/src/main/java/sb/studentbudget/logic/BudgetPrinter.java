@@ -52,7 +52,7 @@ public class BudgetPrinter {
      * @see sb.studentbudget.budget.Budget#getIncome()
      * @see sb.studentbudget.budget.Budget#getExpense()
      */
-    public String printDetailedMonthlyBudget() {
+    public String budgetReview() {
 
         String review = "";
 
