@@ -1,6 +1,5 @@
 package sb.studentbudget.logic;
 
-import javax.swing.JFileChooser;
 import sb.studentbudget.budget.Budget;
 
 /**
@@ -10,9 +9,9 @@ import sb.studentbudget.budget.Budget;
  */
 public class BudgetPrinter {
 
-    private Budget budget;
-    private Calc calc;
-    private TextWriter writer;
+    private final Budget budget;
+    private final Calc calc;
+    private final TextWriter writer;
 
     /**
      * Constructor that creates new BudgetPrinter object. Initialises budget
@@ -32,8 +31,8 @@ public class BudgetPrinter {
         return this.writer;
     }
 
-    public void writeToFile(JFileChooser fileChooser) {
-        this.writer.writeToFile(printDetailedMonthlyBudget(), fileChooser);
+    public Calc getCalc() {
+        return this.calc;
     }
 
     /**
@@ -60,13 +59,13 @@ public class BudgetPrinter {
         review += "Budget review:\n\n";
         review += "Income:\n";
         for (int i = 0; i < this.budget.getIncome().size(); i++) {
-            review += this.budget.getIncome().get(i).getName() + "\t";
+            review += this.budget.getIncome().get(i).getTitle() + "\t";
             review += this.budget.getIncome().get(i).getAmount() + " €\n";
         }
 
         review += "\nExpenses:\n";
         for (int i = 0; i < this.budget.getExpense().size(); i++) {
-            review += this.budget.getExpense().get(i).getName() + "\t";
+            review += this.budget.getExpense().get(i).getTitle() + "\t";
             review += this.budget.getExpense().get(i).getAmount() + " €\n";
         }
 

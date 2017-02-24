@@ -1,45 +1,26 @@
 package sb.studentbudget.logicTest;
 
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import sb.studentbudget.budget.Budget;
-import sb.studentbudget.logic.BudgetPrinter;
 import sb.studentbudget.logic.Calc;
 import sb.studentbudget.logic.Function;
 
 public class BudgetPrinterTest {
 
+    private final Budget budget;
+    private final Function function;
+    private final Calc calc;
+
     public BudgetPrinterTest() {
-    }
-
-    @BeforeClass
-    public static void setUpClass() {
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
+        budget = new Budget();
+        function = this.budget.getFunction();
+        calc = new Calc(budget);
     }
 
     @Before
     public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
-    }
-
-    @Test
-    public void TestBudgetPrinter() {
-
-        Budget budget = new Budget();
-        Function function = new Function(budget);
-        BudgetPrinter printer = new BudgetPrinter(budget);
-        Calc calc = new Calc(budget);
-
         function.addExpense("vuokra", 300);
         function.addExpense("puhelin", 30);
         function.addExpense("sähkö", 5);
@@ -49,7 +30,30 @@ public class BudgetPrinterTest {
         function.addIncome("opintotuki", 400);
         function.addIncome("säästöt", 200);
 
-        String answer = printer.printDetailedMonthlyBudget();
+    }
+
+    @Test
+    public void constructorCreatesTextWriter() {
+        String answer = "";
+        if (this.budget.getPrinter().getWriter() != null) {
+            answer = "notNull";
+        }
+        assertEquals("notNull", answer);
+    }
+
+    @Test
+    public void constructorCreatesCalc() {
+        String answer = "";
+        if (this.budget.getPrinter().getCalc() != null) {
+            answer = "notNull";
+        }
+        assertEquals("notNull", answer);
+    }
+
+    @Test
+    public void TestBudgetPrinter() {
+
+        String answer = this.budget.getPrinter().printDetailedMonthlyBudget();
 
         assertEquals("Budget review:\n\n"
                 + "Income:\n"
@@ -63,9 +67,8 @@ public class BudgetPrinterTest {
                 + "ruoka\t150.0 €\n\n"
                 + "Total monthly income: 600.0 €\n"
                 + "Total monthly expenses: 510.0 €\n"
-                + "Excess cash: 90,00 €\n"
+                + "Balance: 90,00 €\n"
                 + "Weekly budget: 22,50 €\n"
                 + "Daily budget: 3,00 €\n", answer);
-
     }
 }

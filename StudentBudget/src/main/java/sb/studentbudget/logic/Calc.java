@@ -9,7 +9,7 @@ import sb.studentbudget.budget.Budget;
  */
 public class Calc {
 
-    private Budget budget;
+    private final Budget budget;
 
     /**
      * Constructor initialises budget that's being used for all calculations.

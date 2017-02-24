@@ -14,15 +14,15 @@ import sb.studentbudget.budget.Budget;
  */
 public class ActionButtonListener implements ActionListener {
 
-    private JRadioButton income;
-    private JRadioButton expense;
+    private final JRadioButton income;
+    private final JRadioButton expense;
     private JButton okayButton;
-    private JTextField title;
-    private JTextField amount;
-    private JTextArea budgetReview;
-    private JRadioButton add;
-    private JRadioButton delete;
-    private Budget budget;
+    private final JTextField title;
+    private final JTextField amount;
+    private final JTextArea budgetReview;
+    private final JRadioButton add;
+    private final JRadioButton delete;
+    private final Budget budget;
 
     /**
      * Constructor that initialises attributes for ActionChooserListener object.

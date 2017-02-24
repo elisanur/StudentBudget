@@ -7,34 +7,42 @@ package sb.studentbudget.budget;
  */
 public class Money {
 
-    private double amount;
-    private String name;
+    private final double amount;
+    private final String title;
 
     /**
-     * Constructor initialises attributes from given String name and double amount.
-     * 
-     * @param name name String from user's input 
+     * Constructor initialises attributes from given String name and double
+     * amount.
+     *
+     * @param title name String from user's input
      * @param amount amount Double from user's input
      */
-    public Money(String name, double amount) {
+    public Money(String title, double amount) {
         this.amount = amount;
-        this.name = name;
+        this.title = title;
     }
 
     public double getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
+    public String getTitle() {
+        return title;
     }
 
-    public String getName() {
-        return name;
-    }
+    
+    /**
+     * Method compares to Money objects by their name
+     *
+     * @param title title String from user's input
+     * @return returns 0 is the title is the same and -1 if not
+     */
 
-    public void setName(String name) {
-        this.name = name;
+    public int compareTo(String title) {
+        if (title.equals(this.title)) {
+            return 0;
+        }
+        return -1;
     }
 
 }

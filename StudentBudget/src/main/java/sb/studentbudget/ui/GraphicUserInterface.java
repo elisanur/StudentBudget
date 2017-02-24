@@ -15,11 +15,12 @@ import javax.swing.*;
 public class GraphicUserInterface implements Runnable {
 
     private JFrame frame;
-    private Scanner scan;
-    private Budget budget;
+    private final Scanner scan;
+    private final Budget budget;
 
     /**
      *
+     * @throws java.io.IOException
      */
     public GraphicUserInterface() throws IOException {
         this.scan = new Scanner(System.in);
@@ -42,7 +43,6 @@ public class GraphicUserInterface implements Runnable {
     }
 
     private void createComponents(Container container) {
-//        container.setLayout(new GridBagLayout());
         container.add(createPanel());
     }
 
@@ -56,7 +56,6 @@ public class GraphicUserInterface implements Runnable {
 
     private JPanel createPanel() {
         JPanel panel = new JPanel(new GridBagLayout());
-//        panel.setLayout(new GridBagLayout());
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         GridBagConstraints c = new GridBagConstraints();
 
@@ -94,7 +93,7 @@ public class GraphicUserInterface implements Runnable {
         c.weightx = 0.5;
         panel.add(delete, c);
 
-        JLabel question2 = new JLabel("Choose the list to be modifyed:");
+        JLabel question2 = new JLabel("Choose which list you want to modify:");
         c.fill = GridBagConstraints.HORIZONTAL;
         c.gridx = 0;
         c.gridy = 4;
@@ -182,11 +181,9 @@ public class GraphicUserInterface implements Runnable {
         panel.add(exportButton, c);
 
         budgetReview.setText(this.budget.getPrinter().printDetailedMonthlyBudget());
-//        budget.setPreferredSize(new Dimension(500, 300));
-        budgetReview.setEditable(false);
         JScrollPane scroll = new JScrollPane(budgetReview);
         scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-//        scroll.setPreferredSize(new Dimension(500, 300));
+        
         c.gridx = 0;
         c.gridy = 13;
         c.ipady = 210;

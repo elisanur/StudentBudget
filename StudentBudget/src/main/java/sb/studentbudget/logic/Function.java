@@ -1,6 +1,5 @@
 package sb.studentbudget.logic;
 
-import java.util.ArrayList;
 import sb.studentbudget.budget.Money;
 import sb.studentbudget.budget.Budget;
 
@@ -59,7 +58,7 @@ public class Function {
      */
     public void removeIncomeByName(String name) {
         for (int i = 0; i < this.budget.getIncome().size(); i++) {
-            if (this.budget.getIncome().get(i).getName().equals(name)) {
+            if (this.budget.getIncome().get(i).compareTo(name) == 0) {
                 this.budget.getIncome().remove(i);
             }
         }
@@ -77,80 +76,9 @@ public class Function {
      */
     public void removeExpenseByName(String name) {
         for (int i = 0; i < this.budget.getExpense().size(); i++) {
-            if (this.budget.getExpense().get(i).getName().equals(name)) {
+            if (this.budget.getExpense().get(i).compareTo(name) == 0) {
                 this.budget.getExpense().remove(i);
             }
-        }
-    }
-
-    /**
-     * Removes Money-type income from ArrayList of incomes using the income
-     * index (int).
-     *
-     * @param id id int of index used for removing
-     *
-     * @see sb.studentbudget.budget.Budget#getIncome()
-     * @see sb.studentbudget.budget.Money#getName()
-     */
-    public void removeIncomeById(int id) {
-        if (!this.budget.getIncome().get(id).getName().isEmpty()) {
-            this.budget.getIncome().remove(id);
-        }
-    }
-
-    /**
-     * Removes Money-type expense from ArrayList of expenses using the expense
-     * index (int).
-     *
-     * @param id id int of index used for removing
-     *
-     * @see sb.studentbudget.budget.Budget#getExpense()
-     * @see sb.studentbudget.budget.Money#getName()
-     */
-    public void removeExpenseById(int id) {
-        if (!this.budget.getExpense().get(id).getName().isEmpty()) {
-            this.budget.getExpense().remove(id);
-        }
-    }
-
-    /**
-     * Renames the name of Money-type income or expense.
-     *
-     * @param listName name string that refers to either income or expense
-     * @param id id int for finding the right Money object from the referred
-     * ArrayList
-     * @param newName new name string for renaming
-     *
-     * @see sb.studentbudget.budget.Budget#getIncome()
-     * @see sb.studentbudget.budget.Money#setName(java.lang.String)
-     */
-    public void renameTitle(String listName, int id, String newName) {
-        if (listName.equals("income")) {
-            this.budget.getIncome().get(id).setName(newName);
-
-        }
-        if (listName.equals("expense")) {
-            this.budget.getExpense().get(id).setName(newName);
-
-        }
-    }
-
-    /**
-     * Updates the amount of Money-type income or expense.
-     *
-     * @param listName name string that refers to either income or expense
-     * @param id id int for finding the right Money object from the referred
-     * ArrayList
-     * @param newAmount new amount double for updating
-     */
-    public void updateAmount(String listName, int id, double newAmount) {
-        if (listName.equals("income")) {
-            this.budget.getIncome().get(id).setAmount(newAmount);
-
-        }
-        if (listName.equals("expense")) {
-            this.budget.getExpense().get(id).setAmount(newAmount);
-
         }
     }
 }

@@ -13,7 +13,7 @@ public class TextWriter {
     /**
      * Writes budget review to .txt -file using the BudgetPrinter.
      *
-     * @param printer BudgetPrinter object
+     * @param review Budget review made by the Budget Printer
      * @param fileChooser JFileChooser object
      *
      * @see sb.studentbudget.logic.BudgetPrinter#printDetailedMonthlyBudget()

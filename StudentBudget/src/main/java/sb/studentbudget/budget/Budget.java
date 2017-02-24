@@ -11,18 +11,18 @@ import sb.studentbudget.logic.Function;
  */
 public class Budget {
 
-    private ArrayList<Money> income;
-    private ArrayList<Money> expense;
-    private Function function;
-    private BudgetPrinter printer;
+    private final ArrayList<Money> income;
+    private final ArrayList<Money> expense;
+    private final Function function;
+    private final BudgetPrinter printer;
 
     /**
      * Constructor that initialises attributes for Budget object.
      * Creates ArrayList "income", ArrayList "expense", new Function and new BudgetPrinter.
      */
     public Budget() {
-        this.income = new ArrayList<Money>();
-        this.expense = new ArrayList<Money>();
+        this.income = new ArrayList<>();
+        this.expense = new ArrayList<>();
         this.function = new Function(this);
         this.printer = new BudgetPrinter(this);
 

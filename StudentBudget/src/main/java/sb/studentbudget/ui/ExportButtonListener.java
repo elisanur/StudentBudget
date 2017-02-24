@@ -15,7 +15,7 @@ import sb.studentbudget.budget.Budget;
  */
 public class ExportButtonListener implements ActionListener {
 
-    private Budget budget;
+    private final Budget budget;
 
 /**
  * Constructor that initialises budget attribute. 
@@ -33,7 +33,7 @@ public class ExportButtonListener implements ActionListener {
         int returnValue = fileChooser.showSaveDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             try {
-                this.budget.getPrinter().writeToFile(fileChooser);
+                this.budget.getPrinter().getWriter().writeToFile(this.budget.getPrinter().printDetailedMonthlyBudget(), fileChooser);
             } catch (Exception ex) {
             }
         }

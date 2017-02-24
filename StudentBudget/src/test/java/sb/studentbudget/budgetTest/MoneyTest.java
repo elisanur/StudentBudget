@@ -1,26 +1,14 @@
 package sb.studentbudget.budgetTest;
 
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import sb.studentbudget.budget.Money;
 import static org.junit.Assert.*;
 
 public class MoneyTest {
-
-    Money money;
+    private Money money;
 
     public MoneyTest() {
-    }
-
-    @BeforeClass
-    public static void setUpClass() {
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
     }
 
     @Before
@@ -30,37 +18,41 @@ public class MoneyTest {
         money = new Money(name, amount);
     }
 
-    @After
-    public void tearDown() {
-    }
-
     @Test
     public void getNameTest() {
-        String answer = money.getName();
+        String answer = money.getTitle();
         assertEquals("loan", answer);
-
     }
-    
+
     @Test
     public void getAmountTest() {
         double answer = money.getAmount();
         assertEquals(300, answer, 0.005);
-
     }
 
     @Test
     public void constructorSetsName() {
-        money.setName("support");
-        String answer = money.getName();
-        assertEquals("support", answer);
-
+        String answer = money.getTitle();
+        assertEquals("loan", answer);
     }
 
     @Test
     public void constructorSetsAmount() {
-        money.setAmount(400);
         double answer = money.getAmount();
-        assertEquals(400, answer, 0.005);
+        assertEquals(300, answer, 0.005);
+    }
 
+    @Test
+    public void compareToSimilar() {
+        Money other = new Money("loan", 300);
+        int answer = other.compareTo(this.money.getTitle());
+        assertEquals(0, answer);
+    }
+
+    @Test
+    public void compareToDifferent() {
+        Money other = new Money("support", 300);
+        int answer = other.compareTo(this.money.getTitle());
+        assertEquals(-1, answer);
     }
 }
