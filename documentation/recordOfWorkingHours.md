@@ -21,3 +21,4 @@ Day | Hours | Description
 22.02.2017 | 1.0h | Fixing a small bug in gui.
 23.02.2017 | 2.0h | Refactoring code.
 24.02.2017 | 7.0h | Fixing class diagram and sequence diagrams to match the code. Refactoring code and tests. Writing manual. Generating reports.
+26.02.2017 | 1.0h | Fixing pom. Creating jar file. Generating reports.
