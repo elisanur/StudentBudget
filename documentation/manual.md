@@ -4,7 +4,8 @@ Welcome to use StudentBudget program! This is a quick guide for getting started 
 
 Would you like to add or delete a title?  
 Choose one option: add or delete.   
-If neither is chosen, Action! button won't operate. 
+If neither is chosen, Action! button won't operate.   
+If using delete option, title must be written with exact same letters (including eg. uppercase, lowercase, spaces etc similarly written). Amount field can be left empty. Delete option will always remove all titles named similarly.
 
 Choose which list you want to modify:   
 Choose one option: income or expense.   
